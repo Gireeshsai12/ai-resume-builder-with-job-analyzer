@@ -65,14 +65,14 @@ Users can:
 ```bash
 ai-resume-builder-with-job-analyzer/
 │
-├── frontend/
+├── client/
 │   ├── src/
 │   ├── components/
 │   ├── pages/
 │   ├── services/
 │   └── package.json
 │
-├── backend/
+├── server/
 │   ├── src/
 │   │   ├── controllers/
 │   │   ├── routes/
@@ -90,31 +90,41 @@ ai-resume-builder-with-job-analyzer/
 ├── README.md
 └── .gitignore
 ```
+
+---
+
 ##  Installation & Setup
 
 ### 1️ Clone the repository
 
-git clone https://github.com/your-username/ai-resume-builder-with-job-analyzer.git
+```bash
+git clone https://github.com/Gireeshsai12/ai-resume-builder-with-job-analyzer.git
 cd ai-resume-builder-with-job-analyzer
+```
+
+---
 
 ### 2️ Install dependencies
 
-#### Frontend
+#### Client
 
 ```bash
-cd frontend
+cd client
 npm install
 ```
 
-#### Backend
+#### Server
 
 ```bash
-cd ../backend
+cd ../server
 npm install
 ```
+
+---
+
 ### 3️ Setup Environment Variables
 
-Create a `.env` file in backend:
+Create a `.env` file inside the `server` folder:
 
 ```env
 PORT=5000
@@ -122,21 +132,23 @@ MONGO_URI=your_mongodb_connection_string
 GEMINI_API_KEY=your_api_key
 ```
 
+---
+
 ### 4️ Run the application
 
 #### Start backend
 
 ```bash
+cd server
 npm start
 ```
 
 #### Start frontend
 
 ```bash
-cd ../frontend
+cd ../client
 npm run dev
 ```
-
 ##  How It Works
 
 1. User enters resume details
